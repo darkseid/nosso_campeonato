@@ -1,2 +1,7 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+Sistema para criação, controle e gerenciamento de campeonatos.
+
+Numa primeira fase, serão contempladas as seguintes funcionalidades:
+
+1) Criacao de campeonatos de pontos corridos
+1.1) Opcao de turno e returno
+
