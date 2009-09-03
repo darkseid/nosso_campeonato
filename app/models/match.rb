@@ -17,6 +17,10 @@ class Match < ActiveRecord::Base
     @foreign_score = 0
   end
   
+  def get_rematch
+    Match.new @foreign_team.clone, @home_team.clone
+  end
+  
   
   def winner
     if @home_score > @foreign_score

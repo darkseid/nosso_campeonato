@@ -37,4 +37,18 @@ class MatchTest < ActiveSupport::TestCase
     
   end    
   
+  test "getting a rematch" do
+    
+    t1 = teams :corinthians
+    t2 = teams :santos
+  
+    match = Match.new t1,t2
+    puts match
+    
+    m = match.get_rematch
+    assert_equal('corinthians', m.foreign_team.name)
+    assert_equal('santos', m.home_team.name)
+
+  end
+  
 end

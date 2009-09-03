@@ -5,11 +5,12 @@ class ChampionshipTest < ActiveSupport::TestCase
   test "geracao de campeonatos de pontos corridos: 3 times sem returno" do
     
     c = Championship.new
-    c.teams << teams(:corinthians)
-    c.teams << teams(:santos)
-    c.teams << teams(:sao_paulo)
-    
-    matches = c.generate_matches
+    # c.teams << teams(:corinthians)
+    # c.teams << teams(:santos)
+    # c.teams << teams(:sao_paulo)
+
+    c = ChampionshipFactory.build_championship [teams(:corinthians), teams(:santos), teams(:sao_paulo)]    
+    matches = c.matches
     
     assert_equal(3, matches.size)
     assert_equal(teams(:corinthians), matches[0].home_team)
