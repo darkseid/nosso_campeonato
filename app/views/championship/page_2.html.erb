@@ -1,0 +1,12 @@
+Total de times: <%= @teams.size %>!
+<hr/>
+
+
+<% @c.matches.each do |m| -%>
+
+<p>
+	<%= h m.home_team.name%> X <%= h m.foreign_team.name%>
+</p>
+
+<% end -%>
+

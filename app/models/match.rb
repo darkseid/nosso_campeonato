@@ -29,5 +29,12 @@ class Match < ActiveRecord::Base
       @foreign_team
     end
   end
+  
+  def invert
+  	aux = @foreign_team
+  	@foreign_team = @home_team
+  	@home_team = @foreign_team
+ 	end
+  	
     
 end

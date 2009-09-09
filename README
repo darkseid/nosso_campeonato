@@ -9,7 +9,7 @@ Numa primeira fase, serão contempladas as seguintes funcionalidades:
 Frameworks utilizados / a serem utilizados
 
 Testes
-  RSpec para testes
+  RSpec para testes: ruby script/plugin install git://github.com/dchelimsky/rspec-rails.git -r 'refs/tags/1.2.7.1'
   Cucumber para testes de aceitacao
 
 Desenvolvimento
