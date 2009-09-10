@@ -3,6 +3,8 @@ class Match < ActiveRecord::Base
   has_one :home_team, :class_name => "Team"
   has_one :foreign_team, :class_name => "Team"
 
+	validates_presence_of :home_team
+	validates_presence_of :foreign_team
   
   attr_accessor :home_team
   attr_accessor :foreign_team
@@ -10,11 +12,10 @@ class Match < ActiveRecord::Base
   attr_accessor :home_score
   attr_accessor :foreign_score
   
-  def initialize t1, t2
-    @home_team = t1
+  def initialize attributes
     @home_score = 0
-    @foreign_team = t2
     @foreign_score = 0
+    super
   end
   
   def get_rematch
@@ -29,5 +30,13 @@ class Match < ActiveRecord::Base
       @foreign_team
     end
   end
+  
+  def invert
+  	aux = @foreign_team
+  	@foreign_team = @home_team
+  	@home_team = @foreign_team
+	self
+  end
+  	
     
 end
