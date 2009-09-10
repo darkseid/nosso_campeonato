@@ -7,7 +7,7 @@ describe Match do
     @valid_attributes = {:home_team_id => teams(:corinthians).id, :foreign_team_id => teams(:palmeiras).id}
   end
   
-  it "shold be valid with home and visitor teams" do
+  it "should be valid with home and visitor teams" do
     match = create_match
     match.should be_valid
   end
