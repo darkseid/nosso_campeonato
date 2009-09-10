@@ -1,2 +1,2 @@
-log/*
-de/teste.sqlite3
+log/*.log
+db/test.sqlite3
