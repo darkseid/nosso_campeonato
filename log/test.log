@@ -219,3 +219,14 @@
   [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 391316548) [0m
   [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
   [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 903799208) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 391316548) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 903799208) [0m
+  [4;35;1mTeam Load (0.3ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 391316548) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
+  [4;35;1mTeam Load (0.3ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 391316548) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 391316548) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 391316548) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
