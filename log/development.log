@@ -220,6 +220,7 @@ Migrating to CreateMatches (20090902023952)
   [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090902023353')[0m
   [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090902023408')[0m
 <<<<<<< HEAD
+<<<<<<< HEAD
   [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
@@ -256,6 +257,8 @@ Migrating to CreateMatches (20090902023952)
   [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090902023353')[0m
   [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090902023408')[0m
 =======
+=======
+>>>>>>> 4f7daeaf6138d733806537dd7b29dc3fc29b558d
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2009-09-08 14:27:22) [GET]
@@ -980,6 +983,7 @@ Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-09-08 15:40:29) 
   Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"timao", "2"=>"bambi", "3"=>"porco", "4"=>"peixe"}, "authenticity_token"=>"NNkaZsRksGJVQCfkiIobQKqAWhNczcE4Vbc73KSEZG4="}
 Rendering championship/page_2
 Completed in 24ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_2]
+<<<<<<< HEAD
 >>>>>>> 4f7daeaf6138d733806537dd7b29dc3fc29b558d
   [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
  FROM sqlite_master
@@ -1016,3 +1020,5 @@ Completed in 24ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_
   [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090902023952')[0m
   [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090902023353')[0m
   [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090902023408')[0m
+=======
+>>>>>>> 4f7daeaf6138d733806537dd7b29dc3fc29b558d
