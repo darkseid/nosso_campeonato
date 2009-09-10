@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20090902023952) do
   create_table "matches", :force => true do |t|
     t.integer  "home_team_id"
     t.integer  "foreign_team_id"
+    t.integer  "home_team_score"
+    t.integer  "foreign_team_score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,6 +3,8 @@ class CreateMatches < ActiveRecord::Migration
     create_table :matches do |t|
       t.integer :home_team_id
       t.integer :foreign_team_id
+      t.integer :home_team_score
+      t.integer :foreign_team_score
       t.timestamps
     end
   end
