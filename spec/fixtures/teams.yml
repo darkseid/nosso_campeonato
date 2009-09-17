@@ -1,0 +1,17 @@
+corinthians:
+    name: corinthians
+
+palmeiras:
+    name: palmeiras
+    
+santos:
+    name: santos
+    
+sao_paulo:
+    name: sao paulo
+
+internacional:
+    name: internacional
+    
+gremio:
+    name: gremio
