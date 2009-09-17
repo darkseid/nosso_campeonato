@@ -1,5 +1,4 @@
 class Match < ActiveRecord::Base
-  DRAW = "Draw"
 
   has_one :home_team, :class_name => "Team"
   has_one :foreign_team, :class_name => "Team"
@@ -19,5 +18,14 @@ class Match < ActiveRecord::Base
   def draw?
     winner.nil?
   end
+  
+  def eql? other
+    home_team.eql? other.home_team and foreign_team.eql? other.foreign_team
+  end
+  
+  def to_s
+    "#{home_team.name} #{home_team_score} X #{foreign_team_score} #{foreign_team.name}"
+  end
+  
     
 end
