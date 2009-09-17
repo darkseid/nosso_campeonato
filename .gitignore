@@ -1,3 +1,4 @@
 log/*.log
 db/test.sqlite3
 log/development.log
+teste_ignore
