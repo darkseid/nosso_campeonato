@@ -6,18 +6,45 @@ describe "ScoreComputing" do
 		
 		specify "should give 3 points to the winner" do
 			
-			m = Match.new({:home_team => Team.new({:name => 'corinthians'}), :foreign_team => Team.new({:name => 'santos'})})
+			m = create_match
 			m.home_team_score = 1
-			m.home_team_score = 0			
+			m.foreign_team_score = 0			
 			
-			ScoringHelper.compute_scoring m
+			ScoringSystem.compute_scoring m
 			
-			m.home_team.should have(3).points
-			m.foreign_team.should have(0).points
-			
-			
+			m.home_team.points.should be_eql 3
+			m.foreign_team.points.should be_eql 0
 		end
+
+		specify "should give no points to the loser" do
+			
+			m = create_match
+			m.home_team_score = 1
+			m.foreign_team_score = 0			
+			
+			ScoringSystem.compute_scoring m
+			
+			m.foreign_team.points.should be_eql 0
+		end
+
+		specify "should give 1 point to each team in a draw match" do
+			
+			m = create_match
+			m.home_team_score = 2
+			m.foreign_team_score = 2			
+			
+			ScoringSystem.compute_scoring m
+			
+			m.foreign_team.points.should be_eql 1
+			m.foreign_team.points.should be_eql 1			
+		end
+
 		
+	end
+	
+	private
+	def create_match
+		Match.new({:home_team => Team.new({:name => 'corinthians'}), :foreign_team => Team.new({:name => 'santos'})})
 	end
 	
 end

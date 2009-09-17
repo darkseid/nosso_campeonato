@@ -9,12 +9,12 @@ class Match < ActiveRecord::Base
   attr_accessor :home_team
   attr_accessor :foreign_team
   
-  attr_accessor :home_score
-  attr_accessor :foreign_score
+  attr_accessor :home_team_score
+  attr_accessor :foreign_team_score
   
   def initialize attributes
-    @home_score = 0
-    @foreign_score = 0
+    @home_team_score = 0
+    @foreign_team_score = 0
     super
   end
   
@@ -24,18 +24,22 @@ class Match < ActiveRecord::Base
   
   
   def winner
-    if @home_score > @foreign_score
+    if @home_team_score > @foreign_team_score
       @home_team
-    elsif @foreign_score > @home_score 
+    elsif @foreign_team_score > @home_team_score 
       @foreign_team
     end
   end
+  
+  def draw?
+  	@home_team_score == @foreign_team_score
+ 	end
   
   def invert
   	aux = @foreign_team
   	@foreign_team = @home_team
   	@home_team = @foreign_team
-	self
+		self
   end
   	
     
