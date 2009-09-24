@@ -2,10 +2,10 @@ class Match < ActiveRecord::Base
 
   has_one :home_team, :class_name => "Team"
   has_one :foreign_team, :class_name => "Team"
-
-	validates_presence_of :home_team
-	validates_presence_of :foreign_team
-
+  
+  validates_presence_of :home_team
+  validates_presence_of :foreign_team
+  
   validates_numericality_of :home_team_score, :on => :create, :message => "is not a number"
   validates_numericality_of :foreign_team_score, :on => :create, :message => "is not a number"
 
