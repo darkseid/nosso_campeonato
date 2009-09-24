@@ -3,7 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Championship do
   fixtures :teams
   
-  
   before(:each) do
     @teams = [teams(:corinthians), teams(:santos), teams(:gremio),
        teams(:palmeiras), teams(:internacional), teams(:sao_paulo)]
@@ -30,6 +29,29 @@ describe Championship do
     
     champ.matches[4].should be_eql match(:corinthians, :santos)
     champ.matches[5].should be_eql match(:sao_paulo, :santos)   
+  end
+  
+  context "with playoff structure" do
+    before(:each) do
+      @factory = PlayoffFactory.new
+    end
+     
+    specify "should build a championship with maximum 16 teams" do
+      champ_teams = []
+      (1..17).each {|i| champ_teams << Team.new(:name => i.to_s )}
+      
+      lambda {
+        @factory.build_championship champ_teams
+      }.should raise_error(RuntimeError, "Utilize no máximo 16 times")
+    end
+     
+    specify "and 4 teams, should build this championship [team1 x team2 | team3 x team4 | winner 1 x winner 2]" do
+      
+      c = @factory.build_championship @teams[1..4]
+      c.matches.size.should == 3
+     
+    end
+    
   end
   
   private 
