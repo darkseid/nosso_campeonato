@@ -6,13 +6,14 @@ class PlayoffFactory
     teams = fill_teams(teams)
     matches = []
     
+    phases = []
+    
     teams << Team.new unless teams.size % 2 == 0
     
     i=0
     num_of_teams = teams.size
     while i < teams.size do
       matches << Match.new({:home_team => teams[i], :foreign_team => teams[i+1]})
-      teams << Team.new(:name=>"Winner#{i/2 + 1}")
       i = i + 2
     end
     puts matches
@@ -21,6 +22,10 @@ class PlayoffFactory
     return c
   end
 
+  #
+  #  Para dar certo o campeonato de playoffs, é necessário ter um numero de times igual a 2, 4, 8, 16, etc.
+  #  O método a seguir preenche o array de times para ter o tamanho correto.
+  #
   def fill_teams teams
     i = 0
     need_to_fill = 0
@@ -30,18 +35,6 @@ class PlayoffFactory
     end
     (1..(need_to_fill-teams.size)).each{|i| teams << Team.new(:name => "Empty#{i}")}
     teams
-  end
-
-  def num_of_phases num_of_teams
-    
-    num_of_teams = num_of_teams + 1 unless num_of_teams % 2 == 0
-    
-    aux = 1 
-    return aux if num_of_teams == 2
-    
-    aux = aux + num_of_phases(num_of_teams / 2)
-        
-    aux
   end
   
 end

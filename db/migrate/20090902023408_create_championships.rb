@@ -1,7 +1,7 @@
 class CreateChampionships < ActiveRecord::Migration
   def self.up
     create_table :championships do |t|
-      
+      t.string :name
 
       t.timestamps
     end

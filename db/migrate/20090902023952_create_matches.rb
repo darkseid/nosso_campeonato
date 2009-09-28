@@ -5,6 +5,7 @@ class CreateMatches < ActiveRecord::Migration
       t.integer :foreign_team_id
       t.integer :home_team_score, :default => 0
       t.integer :foreign_team_score, :default => 0
+      t.references :phase
       t.timestamps
     end
   end
