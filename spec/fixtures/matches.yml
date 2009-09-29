@@ -5,3 +5,17 @@
 #
 # two:
 #   column: value
+one:
+    home_team_score: 3
+    foreign_team_score: 1
+    teams: corinthians, palmeiras
+    
+two:
+    teams: sao_paulo, santos
+    home_team_score: 0
+    foreign_team_score: 1
+    
+three:
+    teams: corinthians, santos
+    home_team_score: 0
+    foreign_team_score: 0

@@ -1898,3 +1898,165 @@ Migrating to CreatePhases (20090925011522)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("phases")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("teams")[0m
   [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-28 23:07:08', '2009-09-28 23:07:08')[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:17:55', '2009-09-29 02:17:55')[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:18:15', '2009-09-29 02:18:15')[0m
+  [4;36;1mPhase Create (0.3ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:18:52', '2009-09-29 02:18:52')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: teams.home_team_id: SELECT * FROM "teams" WHERE ("teams".home_team_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:19:22', '2009-09-29 02:19:22')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: teams.match_id: SELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:20:50', '2009-09-29 02:20:50')[0m
+  [4;35;1mMatch Load (0.4ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:24:02', '2009-09-29 02:24:02')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.4ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:25:10', '2009-09-29 02:25:10')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:25:59', '2009-09-29 02:25:59')[0m
+  [4;35;1mMatch Load (0.4ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:27:16', '2009-09-29 02:27:16')[0m
+  [4;35;1mMatch Load (0.4ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:27:32', '2009-09-29 02:27:32')[0m
+  [4;35;1mMatch Load (0.4ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:28:18', '2009-09-29 02:28:18')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:29:07', '2009-09-29 02:29:07')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:29:34', '2009-09-29 02:29:34')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:30:07', '2009-09-29 02:30:07')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:30:20', '2009-09-29 02:30:20')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 442820205) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:30:32', '2009-09-29 02:30:32')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 442820205) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:31:45', '2009-09-29 02:31:45')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mMatch Load (0.2ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:32:23', '2009-09-29 02:32:23')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:32:37', '2009-09-29 02:32:37')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:32:47', '2009-09-29 02:32:47')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.9ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:43:43', '2009-09-29 02:43:43')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (1.0ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:46:40', '2009-09-29 02:46:40')[0m
+  [4;35;1mMatch Load (0.4ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:46:47', '2009-09-29 02:46:47')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) LIMIT 1[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) LIMIT 1[0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.3ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:57:00', '2009-09-29 02:57:00')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:57:28', '2009-09-29 02:57:28')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) [0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:57:42', '2009-09-29 02:57:42')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) [0m
+  [4;36;1mPhase Create (0.3ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 02:57:48', '2009-09-29 02:57:48')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 953125641) [0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams".match_id = 996332877) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 03:04:41', '2009-09-29 03:04:41')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: matches_teams.team_id: SELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 953125641 ) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 03:14:23', '2009-09-29 03:14:23')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 953125641 ) [0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 996332877 ) [0m
+  [4;36;1mPhase Create (0.3ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 03:16:47', '2009-09-29 03:16:47')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 953125641 ) [0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 996332877 ) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 03:17:22', '2009-09-29 03:17:22')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 953125641 ) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 996332877 ) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 442820205 ) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 03:17:48', '2009-09-29 03:17:48')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 953125641 ) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 996332877 ) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 442820205 ) [0m
+  [4;36;1mPhase Create (0.4ms)[0m   [0;1mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-09-29 03:18:36', '2009-09-29 03:18:36')[0m
+  [4;35;1mMatch Load (0.3ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 953125641) [0m
+  [4;36;1mMatch Load (0.3ms)[0m   [0;1mSELECT * FROM "matches" WHERE ("matches"."id" = 996332877) [0m
+  [4;35;1mTeam Load (0.4ms)[0m   [0mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 953125641 ) [0m
+  [4;36;1mTeam Load (0.4ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 996332877 ) [0m
+  [4;35;1mMatch Load (0.2ms)[0m   [0mSELECT * FROM "matches" WHERE ("matches"."id" = 442820205) [0m
+  [4;36;1mTeam Load (0.4ms)[0m   [0;1mSELECT * FROM "teams" INNER JOIN "matches_teams" ON "teams".id = "matches_teams".team_id WHERE ("matches_teams".match_id = 442820205 ) [0m
