@@ -14,7 +14,6 @@ class ChampionshipController < ApplicationController
 	def page_2
 		@teams = []
 		params[:teams].each do |key, team_name|
-			puts team_name.class 
 			t = Team.new
 			t.name = team_name
 			@teams << t

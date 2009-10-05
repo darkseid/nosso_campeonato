@@ -6,13 +6,15 @@ class ChampionshipFactory
     teams.each do |team|
       aux_teams.delete(team)
       aux_teams.each do |foreign_team|
-        m = Match.new({:home_team => team, :foreign_team => foreign_team}) 
+        m = Match.new({:home => team, :visitor => foreign_team}) 
         matches << m
       end
     end
     
     c = Championship.new    
-    c.matches = matches
+    p = Phase.new
+    p.matches = matches
+    c.phases << p
     c
   end
 end

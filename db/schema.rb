@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090929030131) do
+ActiveRecord::Schema.define(:version => 20090925011522) do
 
   create_table "championships", :force => true do |t|
     t.string   "name"
@@ -18,16 +18,14 @@ ActiveRecord::Schema.define(:version => 20090929030131) do
   end
 
   create_table "matches", :force => true do |t|
-    t.integer  "home_team_score",    :default => 0
-    t.integer  "foreign_team_score", :default => 0
+    t.integer  "home_score",    :default => 0
+    t.integer  "visitor_score", :default => 0
     t.integer  "phase_id"
+    t.integer  "home_id"
+    t.integer  "visitor_id"
+    t.boolean  "done"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "matches_teams", :force => true do |t|
-    t.integer "match_id"
-    t.integer "team_id"
   end
 
   create_table "phases", :force => true do |t|
@@ -38,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20090929030131) do
 
   create_table "teams", :force => true do |t|
     t.string   "name"
+    t.integer  "points",     :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

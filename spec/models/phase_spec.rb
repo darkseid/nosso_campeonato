@@ -1,7 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Phase do
-  fixtures :matches, :teams
   
   before(:each) do
     @valid_attributes = {
@@ -13,16 +12,52 @@ describe Phase do
     Phase.create!(@valid_attributes)
   end
   
-  it "should create a new match for a single 4-teams championship" do
+  context "With 1 match" do
+  
+    it "should be done, when all its matches were done" do
     
-    p = Phase.new
-    p.add_match matches(:one)
-    p.add_match matches(:two)
+      p = Phase.new
+      m = Factory(:match_one)
+      m.done = true
+      p.add_match m
     
-    p.forward.home.name.should == matches(:three).home.name
-    p.forward.visitor.name.should == matches(:three).visitor.name  
-    
+      p.should be_done
+    end
   end
+  
+  context "With 2 matches" do
+  
+    it "should be done, when all its matches were done" do
+    
+      p = Phase.new
+      m = Factory(:match_one)
+      m.done = true
+      p.add_match m
+    
+      m = Factory(:match_two)
+      m.done = true
+      p.add_match m    
+    
+      p.should be_done
+    end
+    
+    it "should create a new match for a single 4-teams championship" do
+
+      p = Phase.new
+      p.add_match Factory(:match_one)
+      p.add_match Factory(:match_two)
+      p.done
+
+      next_phase = p.forward
+      next_phase.matches.size.should == 1
+
+      match = next_phase.matches[0]
+      match.home.name.should be_eql Factory(:match_winners_1_2).home.name
+      match.visitor.name.should be_eql Factory(:match_winners_1_2).visitor.name
+      match.should_not be_done
+
+    end    
+  end   
   
   
 end

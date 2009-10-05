@@ -8,36 +8,37 @@ describe "Scoring" do
 		specify "should give 3 points to the winner" do
 			
 			m = create_match
-			m.home_team_score = 1
-			m.foreign_team_score = 0			
+			m.home_score = 1
+			m.visitor_score = 0		
+			m.done=true	
 			
-			ScoringSystem.compute_scoring m
+			compute_scoring m
 			
-			m.home_team.points.should be_eql 3
-			m.foreign_team.points.should be_eql 0
+			m.home.points.should == 3
+			m.visitor.points.should == 0
 		end
 
 		specify "should give no points to the loser" do
 			
 			m = create_match
-			m.home_team_score = 1
-			m.foreign_team_score = 0			
+			m.home_score = 1
+			m.visitor_score = 0			
 			
-			ScoringSystem.compute_scoring m
+			compute_scoring m
 			
-			m.foreign_team.points.should be_eql 0
+			m.visitor.points.should be_eql 0
 		end
 
 		specify "should give 1 point to each team in a draw match" do
 			
 			m = create_match
-			m.home_team_score = 2
-			m.foreign_team_score = 2			
+			m.home_score = 2
+			m.visitor_score = 2			
 			
-			ScoringSystem.compute_scoring m
+			compute_scoring m
 			
-			m.foreign_team.points.should be_eql 1
-			m.foreign_team.points.should be_eql 1			
+			m.home.points.should be_eql 1
+			m.visitor.points.should be_eql 1			
 		end
 
 		
@@ -45,7 +46,7 @@ describe "Scoring" do
 	
 	private
 	def create_match
-		Match.new({:home_team => Team.new({:name => 'corinthians'}), :foreign_team => Team.new({:name => 'santos'})})
+		Match.new({:home => Factory(:corinthians), :visitor => Factory(:gremio)})
 	end
 	
 end

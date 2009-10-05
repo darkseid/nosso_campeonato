@@ -1,9 +1,12 @@
 class CreateMatches < ActiveRecord::Migration
   def self.up
     create_table :matches do |t|
-      t.integer :home_team_score, :default => 0
-      t.integer :foreign_team_score, :default => 0
+      t.integer :home_score, :default => 0
+      t.integer :visitor_score, :default => 0
       t.references :phase
+      t.integer :home_id
+      t.integer :visitor_id
+      t.boolean :done
       t.timestamps
     end
   end

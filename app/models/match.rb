@@ -1,21 +1,16 @@
 class Match < ActiveRecord::Base
 
-  has_and_belongs_to_many :teams
+  has_one :home, :class_name => "Team"
+  has_one :visitor, :class_name => "Team"
   
-  validates_numericality_of :home_team_score, :on => :create, :message => "is not a number"
-  validates_numericality_of :foreign_team_score, :on => :create, :message => "is not a number"
-
-  def home
-    teams[0]
-  end
-  
-  def visitor
-    teams[1]
-  end
+  validates_numericality_of :home_score, :on => :create, :message => "is not a number"
+  validates_numericality_of :visitor_score, :on => :create, :message => "is not a number"
+  validates_presence_of :home, :on => :create, :message => "can't be blank"
+  validates_presence_of :visitor, :on => :create, :message => "can't be blank"
 
   def winner
-    return home if home_team_score > foreign_team_score
-    return visitor if foreign_team_score > home_team_score
+    return home if home_score > visitor_score
+    return visitor if visitor_score > home_score
     nil
   end
   

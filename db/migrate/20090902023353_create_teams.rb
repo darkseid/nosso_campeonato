@@ -2,6 +2,7 @@ class CreateTeams < ActiveRecord::Migration
   def self.up
     create_table :teams do |t|
       t.string :name
+      t.integer :points, :default => 0
       t.timestamps
     end
   end
