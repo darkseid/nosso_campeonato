@@ -2940,3 +2940,420 @@ Migrating to CreatePhases (20090925011522)
   [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090902023353')[0m
   [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090902023408')[0m
   [4;35;1mSQL (1.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090902023952')[0m
+
+
+Processing ChampionshipController#index (for 127.0.0.1 at 2009-10-04 23:33:24) [GET]
+Rendering championship/index
+Completed in 69ms (View: 8, DB: 0) | 200 OK [http://localhost/championship]
+
+
+Processing ChampionshipController#page_1 (for 127.0.0.1 at 2009-10-04 23:33:31) [POST]
+  Parameters: {"num_teams"=>"4", "commit"=>"Pŕoxima página", "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs=", "championship_name"=>"teste"}
+Rendering championship/page_1
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_1]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:33:49) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2", "3"=>"time3", "4"=>"time4"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+
+ActionView::TemplateError (undefined method `matches' for #<Championship:0x101d5df98>) on line #5 of app/views/championship/page_2.html.erb:
+2: <hr/>
+3: 
+4: 
+5: <% @c.matches.each do |m| -%>
+6: 
+7: <p>
+8: 	<%= h m.home_team.name%> X <%= h m.foreign_team.name%>
+
+    app/views/championship/page_2.html.erb:5
+
+Rendered rescues/_trace (116.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:39:49) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2", "3"=>"time3", "4"=>"time4"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 29ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:40:18) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2", "3"=>"time3", "4"=>"time4"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 92ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:40:42) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2", "3"=>"time3", "4"=>"time4"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 30ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:41:32) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2", "3"=>"time3", "4"=>"time4"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 29ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:43:15) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2", "3"=>"time3", "4"=>"time4"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 92ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#index (for 127.0.0.1 at 2009-10-04 23:43:27) [GET]
+Rendering championship/index
+Completed in 16ms (View: 1, DB: 0) | 200 OK [http://localhost/championship]
+
+
+Processing ChampionshipController#page_1 (for 127.0.0.1 at 2009-10-04 23:43:32) [POST]
+  Parameters: {"num_teams"=>"2", "commit"=>"Pŕoxima página", "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs=", "championship_name"=>"a"}
+Rendering championship/page_1
+Completed in 14ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_1]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:43:39) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 24ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:44:09) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 88ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:44:25) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+
+ActionView::TemplateError (undefined method `size' for #<Phase:0x1043d1210>) on line #4 of app/views/championship/page_2.html.erb:
+1: Total de times: <%= @teams.size %>!
+2: <hr/>
+3: 
+4: <%= @c.phases[0].size %>
+5: 
+6: 
+7: <% @c.phases do |p| -%>
+
+    app/views/championship/page_2.html.erb:4
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:44:36) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 27ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:45:27) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 26ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:45:54) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 92ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:46:20) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+ERROR: compiling _run_erb_app47views47championship47page_246html46erb RAISED compile error
+/Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:8: syntax error, unexpected ')'
+...er.concat(( @c.phases do |p| ).to_s); @output_buffer.concat ...
+                              ^
+/Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:19: syntax error, unexpected kENSURE, expecting ')'
+/Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:21: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47championship47page_246html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "Total de times: "; @output_buffer.concat(( @teams.size ).to_s); @output_buffer.concat "!\n<hr/>\n\n"
+
+
+; @output_buffer.concat(( @c.phases[0].matches.size ).to_s); @output_buffer.concat "\n\nCampeonato\n\n"
+
+
+
+; @output_buffer.concat(( @c.phases do |p| ).to_s); @output_buffer.concat "\n<p>Fase<br/>\n\t"
+
+;  p.matches.each do |m| 
+@output_buffer.concat "\n\t<p>\n\t\t"
+
+; @output_buffer.concat(( h m.home.name).to_s); @output_buffer.concat " X "; @output_buffer.concat(( h m.visitor.name).to_s); @output_buffer.concat "\n\t</p>\n\n\t"
+
+
+;  end 
+@output_buffer.concat "</p>\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:21:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:8: syntax error, unexpected ')'
+...er.concat(( @c.phases do |p| ).to_s); @output_buffer.concat ...
+                              ^
+/Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:19: syntax error, unexpected kENSURE, expecting ')'
+/Users/rafael/coding/nosso_campeonato/app/views/championship/page_2.html.erb:21: syntax error, unexpected kEND, expecting ')') on line #8 of app/views/championship/page_2.html.erb:
+5: 
+6: Campeonato
+7: 
+8: <%= @c.phases do |p| %>
+9: <p>Fase<br/>
+10: 	<% p.matches.each do |m| -%>
+11: 
+
+    app/views/championship/page_2.html.erb:21:in `compile!'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:46:32) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 27ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:54:52) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.matches) on line #13 of app/views/championship/page_2.html.erb:
+10: <% end -%>
+11: 
+12: <p>Fase<br/>
+13: 	<% p.matches.each do |m| -%>
+14: 
+15: 	<p>
+16: 		<%= h m.home.name%> X <%= h m.visitor.name%>
+
+    app/views/championship/page_2.html.erb:13
+
+Rendered rescues/_trace (105.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:55:07) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 27ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:55:19) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 29ms (View: 3, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:57:04) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 96ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:58:20) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+
+ActionView::TemplateError (undefined method `score' for "#<Team:0x1043e1f98>":Team) on line #14 of app/views/championship/page_2.html.erb:
+11: 	<% p.matches.each do |m| %>
+12: 
+13: 	<p>
+14: 		<%= h m.home.name%> <%= h m.home.score%> X <%= h m.visitor.name%> <%= h m.visitor.score%>
+15: 	</p>
+16: 	<p><%= "Concluído" if m.done?%></p>
+17: 
+
+    app/views/championship/page_2.html.erb:14
+    app/views/championship/page_2.html.erb:11
+    app/views/championship/page_2.html.erb:8
+
+Rendered rescues/_trace (115.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:58:58) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 27ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-04 23:59:17) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"time1", "2"=>"time2"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 28ms (View: 4, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_1 (for 127.0.0.1 at 2009-10-05 00:09:32) [POST]
+  Parameters: {"num_teams"=>"8", "commit"=>"Pŕoxima página", "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs=", "championship_name"=>"a"}
+Rendering championship/page_1
+Completed in 16ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_1]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-05 00:09:39) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"6"=>"6", "7"=>"7", "8"=>"8", "1"=>"1", "2"=>"2", "3"=>"3", "4"=>"4", "5"=>"5"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 32ms (View: 2, DB: 0) | 200 OK [http://localhost/championship/page_2]
+/!\ FAILSAFE /!\  Mon Oct 05 00:09:39 -0300 2009
+  Status: 500 Internal Server Error
+  ActionController::Session::CookieStore::CookieOverflow
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:102:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ChampionshipController#index (for 127.0.0.1 at 2009-10-05 00:10:47) [GET]
+Rendering championship/index
+Completed in 15ms (View: 1, DB: 0) | 200 OK [http://localhost/championship]
+
+
+Processing ChampionshipController#page_1 (for 127.0.0.1 at 2009-10-05 00:10:52) [POST]
+  Parameters: {"num_teams"=>"4", "commit"=>"Pŕoxima página", "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs=", "championship_name"=>"a"}
+Rendering championship/page_1
+Completed in 67ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_1]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-05 00:10:56) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"a", "2"=>"b", "3"=>"c", "4"=>"d"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 24ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-05 00:13:08) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"a", "2"=>"b", "3"=>"c", "4"=>"d"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+
+NameError (uninitialized constant ChampionshipController::PlayoffFoactory):
+  app/controllers/championship_controller.rb:22:in `page_2'
+
+Rendered rescues/_trace (38.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-05 00:13:26) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"1"=>"a", "2"=>"b", "3"=>"c", "4"=>"d"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 26ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_2]
+
+
+Processing ChampionshipController#page_1 (for 127.0.0.1 at 2009-10-05 00:13:36) [POST]
+  Parameters: {"num_teams"=>"8", "commit"=>"Pŕoxima página", "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs=", "championship_name"=>"a"}
+Rendering championship/page_1
+Completed in 15ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_1]
+
+
+Processing ChampionshipController#page_2 (for 127.0.0.1 at 2009-10-05 00:13:45) [POST]
+  Parameters: {"commit"=>"Próxima página", "teams"=>{"6"=>"s", "7"=>"d", "8"=>"f", "1"=>"q", "2"=>"w", "3"=>"e", "4"=>"r", "5"=>"a"}, "authenticity_token"=>"GUffKNZ0T9i+Rm8wnWzweycQ+FmqQt30gMa8MGIdlfs="}
+Rendering championship/page_2
+Completed in 25ms (View: 1, DB: 0) | 200 OK [http://localhost/championship/page_2]

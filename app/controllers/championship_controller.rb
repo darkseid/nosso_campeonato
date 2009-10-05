@@ -19,7 +19,7 @@ class ChampionshipController < ApplicationController
 			@teams << t
 		end
 		
-		@c = ChampionshipFactory.build_championship @teams
+		@c = PlayoffFactory.new.build_championship @teams
 		
 		@c.name = session[:championship].name
 		session[:championship] = @c		
