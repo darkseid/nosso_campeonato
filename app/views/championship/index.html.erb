@@ -1,20 +1,4 @@
-<h2>Crie o seu campeonato!</h2>
+<h1>Campeonatos</h1>
 
-<% form_tag :action => 'page_1'  do -%>
-
-	<p>
-		<%= label_tag 'num_teams', 'Número de times'%>
-		<%= text_field_tag 'num_teams' %>
-	</p>
-	
-	<p>
-		<%= label_tag 'championship_name', 'Nome do campeonato'%>
-		<%= text_field_tag 'championship_name' %>
-	</p>	
-	
-	<p>
-		<%= submit_tag 'Pŕoxima página' %>
-	</p>
-	
-
-<% end -%>
+<%= render :partial => "championship", :collection => @championships %>
+<hr/>

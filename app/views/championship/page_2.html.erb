@@ -1,20 +1,6 @@
 Total de times: <%= @teams.size %>!
 <hr/>
 
-<%= @c.phases[0].matches.size %>
+Campeonato <%= h @c.name %>
 
-Campeonato
-
-<% @c.phases.each do |p| %>
-
-<p>Fase<br/>
-	<% p.matches.each do |m| %>
-
-	<p>
-		<%= h m.home.name%> <%= h m.home_score%> X <%= h m.visitor_score%> <%= h m.visitor.name%>
-	</p>
-	<p><%= "Concluído" if m.done?%></p>
-
-	<% end %>
-</p>
-<% end %>
+<%= render :partial => 'phases/phase', :collection => @c.phases, :as => :phase %>

@@ -1,0 +1,12 @@
+<% puts match.to_s %>
+<% field_set_tag 'match', :class => 'match' do %>
+<%= match.home_id %> / <%= match.home.id%>
+	<% if !match.done? %>
+		<% form_tag(:controller => :matches) do %>
+			<%= hidden_field_tag :home_id, match.home_id %>
+		
+			<%= show_match match%>		  
+			<%= submit_tag "Gravar", :id => "submit", :name => "submit"%>
+		<% end -%>
+	<% end %>
+<% end %>

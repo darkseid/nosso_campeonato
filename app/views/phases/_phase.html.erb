@@ -1,0 +1,5 @@
+<div class="show_phase">
+	<p>Fase</p>	
+	<%= render :partial => 'matches/match', :collection => phase.matches, :as => :match %>
+	<p>Fase <%= 'não' unless phase.done? %> concluída
+</div>

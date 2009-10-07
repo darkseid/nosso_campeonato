@@ -1,6 +1,9 @@
 class ChampionshipController < ApplicationController
 	
 	def index
+  end
+	
+	def new
 		championship = Championship.new
 		session[:championship] = championship
 	end
@@ -14,17 +17,17 @@ class ChampionshipController < ApplicationController
 	def page_2
 		@teams = []
 		params[:teams].each do |key, team_name|
-			t = Team.new
-			t.name = team_name
+			t = Team.create({:name => team_name})
 			@teams << t
 		end
 		
 		@c = PlayoffFactory.new.build_championship @teams
-		
+		puts "New record? #{@c.new_record?}"
 		@c.name = session[:championship].name
-		session[:championship] = @c		
-		
 
+		
+		
+		
 	end
 	
 end

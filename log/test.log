@@ -3445,3 +3445,75 @@ Migrating to CreatePhases (20090925011522)
   [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 173731418) [0m
   [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 96706234) [0m
   [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1243684440) [0m
+  [4;36;1mTeam Create (0.4ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.2ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.4ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.4ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mMatch Create (0.1ms)[0m   [0;1mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(1, '2009-10-06 21:48:28', NULL, '2009-10-06 21:48:28', NULL, NULL, NULL, 3)[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:28' WHERE "id" = 1[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:28' WHERE "id" = 2[0m
+  [4;35;1mTeam Create (0.2ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Palmeiras', '2009-10-06 21:48:28', '2009-10-06 21:48:28', 0)[0m
+  [4;36;1mTeam Create (0.1ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Sao Paulo', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mMatch Create (0.1ms)[0m   [0mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(0, '2009-10-06 21:48:29', NULL, '2009-10-06 21:48:29', NULL, NULL, NULL, 1)[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 3[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 4[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mMatch Create (0.1ms)[0m   [0;1mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(1, '2009-10-06 21:48:29', NULL, '2009-10-06 21:48:29', NULL, NULL, NULL, 3)[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 1[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 2[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Palmeiras', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.1ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Sao Paulo', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mMatch Create (0.1ms)[0m   [0mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(0, '2009-10-06 21:48:29', NULL, '2009-10-06 21:48:29', NULL, NULL, NULL, 1)[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 3[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 4[0m
+  [4;36;1mTeam Create (0.1ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Palmeiras', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mMatch Create (0.1ms)[0m   [0;1mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(0, '2009-10-06 21:48:29', NULL, '2009-10-06 21:48:29', NULL, NULL, NULL, 0)[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 5[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 6[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.1ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Palmeiras', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mMatch Create (0.1ms)[0m   [0mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(0, '2009-10-06 21:48:29', NULL, '2009-10-06 21:48:29', NULL, NULL, NULL, 0)[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 7[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 8[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mMatch Create (0.1ms)[0m   [0;1mINSERT INTO "matches" ("visitor_score", "created_at", "phase_id", "updated_at", "done", "home_id", "visitor_id", "home_score") VALUES(1, '2009-10-06 21:48:29', NULL, '2009-10-06 21:48:29', NULL, NULL, NULL, 3)[0m
+  [4;35;1mTeam Update (0.1ms)[0m   [0mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 1[0m
+  [4;36;1mTeam Update (0.1ms)[0m   [0;1mUPDATE "teams" SET "updated_at" = '2009-10-06 21:48:29' WHERE "id" = 2[0m
+  [4;35;1mPhase Create (0.4ms)[0m   [0mINSERT INTO "phases" ("championship_id", "created_at", "updated_at") VALUES(1, '2009-10-06 21:48:29', '2009-10-06 21:48:29')[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Gremio', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Gremio', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Gremio', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.4ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.3ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Corinthians', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Santos', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Create (0.1ms)[0m   [0;1mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Sao Paulo', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;35;1mTeam Create (0.1ms)[0m   [0mINSERT INTO "teams" ("name", "created_at", "updated_at", "points") VALUES('Palmeiras', '2009-10-06 21:48:29', '2009-10-06 21:48:29', 0)[0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1756167100) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1169778101) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 173731418) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 96706234) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1243684440) [0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1756167100) [0m
+  [4;35;1mTeam Load (0.2ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 380936433) [0m
+  [4;36;1mTeam Load (0.2ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1169778101) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 173731418) [0m
+  [4;36;1mTeam Load (0.1ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 96706234) [0m
+  [4;35;1mTeam Load (0.1ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1243684440) [0m

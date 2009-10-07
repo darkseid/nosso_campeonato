@@ -1,0 +1,12 @@
+<h1>Editing phase</h1>
+
+<% form_for(@phase) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @phase %> |
+<%= link_to 'Back', phases_path %>

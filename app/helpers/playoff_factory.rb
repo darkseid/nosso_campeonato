@@ -12,12 +12,12 @@ class PlayoffFactory
     i=0
     num_of_teams = teams.size
     while i < teams.size do
-      matches << Match.new({:home => teams[i], :visitor => teams[i+1]})
+      matches << Match.create({:home => teams[i], :visitor => teams[i+1]})
       i = i + 2
     end
 
-    c = Championship.new
-    p = Phase.new
+    c = Championship.create
+    p = Phase.create
     p.matches = matches
     c.phases << p
     return c
