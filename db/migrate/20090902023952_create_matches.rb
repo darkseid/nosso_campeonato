@@ -4,8 +4,8 @@ class CreateMatches < ActiveRecord::Migration
       t.integer :home_score, :default => 0
       t.integer :visitor_score, :default => 0
       t.references :phase
-      t.integer :home_id
-      t.integer :visitor_id
+      t.references :home
+      t.references :visitor
       t.boolean :done
       t.timestamps
     end

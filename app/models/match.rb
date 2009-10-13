@@ -1,7 +1,11 @@
 class Match < ActiveRecord::Base
 
-  has_one :home, :class_name => "Team"
-  has_one :visitor, :class_name => "Team"
+#  has_one :home, :class_name => "Team"
+#  has_one :visitor, :class_name => "Team"
+  
+  belongs_to :home, :class_name => "Team"
+  belongs_to :visitor, :class_name => "Team" 
+  belongs_to :phase 
   
   validates_numericality_of :home_score, :on => :create, :message => "is not a number"
   validates_numericality_of :visitor_score, :on => :create, :message => "is not a number"
@@ -23,7 +27,7 @@ class Match < ActiveRecord::Base
   end
   
   def to_s
-    #{}"#{home_team.name} #{home_team_score} X #{foreign_team_score} #{foreign_team.name}"
+    "#{home.name} #{home_score} X #{visitor_score} #{visitor.name}"
   end
   
     

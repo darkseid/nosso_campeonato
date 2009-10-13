@@ -31,7 +31,7 @@ class MatchesController < ApplicationController
   # POST /matches.xml
   def create
     @match = Match.new(params[:match])
-
+		
     respond_to do |format|
       if @match.save
         flash[:notice] = 'Match was successfully created.'
@@ -49,16 +49,14 @@ class MatchesController < ApplicationController
   def update
     @match = Match.find(params[:id])
 
-    respond_to do |format|
-      if @match.update_attributes(params[:match])
-        flash[:notice] = 'Match was successfully updated.'
-        format.html { redirect_to(@match) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @match.errors, :status => :unprocessable_entity }
-      end
+		if @match.update_attributes(params[:match])
+    	flash[:notice] = 'Placar da partida atualizado'
+      redirect_to championship_path(@match.phase.championship)
+		else
+			puts 'erro'
+    	render :action => "edit" 
     end
+
   end
 
   # DELETE /matches/1

@@ -1,12 +1,17 @@
-<% puts match.to_s %>
 <% field_set_tag 'match', :class => 'match' do %>
-<%= match.home_id %> / <%= match.home.id%>
 	<% if !match.done? %>
-		<% form_tag(:controller => :matches) do %>
-			<%= hidden_field_tag :home_id, match.home_id %>
+		<!-- form_tag(:controller => :matches, :method=>:put, :id=>match.id) do -->
+		<% form_for(match) do |f| %>
+			<%= hidden_field_tag 'match[home_id]', match.home.id %>
+			<%= hidden_field_tag 'match[visitor_id]', match.visitor.id %>
 		
-			<%= show_match match%>		  
+		  <%= match.home.name %> <%= f.text_field :home_score %>
+		  X 
+		  <%= f.text_field :visitor_score %> <%= match.visitor.name %>		  
 			<%= submit_tag "Gravar", :id => "submit", :name => "submit"%>
-		<% end -%>
+		<% end %>
+		
+	<% else %>
+		<%= match %>
 	<% end %>
 <% end %>

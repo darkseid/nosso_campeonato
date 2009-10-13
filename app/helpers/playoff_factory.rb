@@ -2,24 +2,25 @@ class PlayoffFactory
   Max = 16
   
   
-  def build_championship teams
+  def build_championship(teams, name="vazio")
     raise "Utilize no máximo 16 times" if teams.size > Max
     teams = fill_teams(teams)
     matches = []
     
     teams << Team.new unless teams.size % 2 == 0
-    
+
+		
+    c = Championship.create :name => name
+    c.phases << Phase.create
+
     i=0
     num_of_teams = teams.size
     while i < teams.size do
-      matches << Match.create({:home => teams[i], :visitor => teams[i+1]})
+    	m = Match.create({:home => teams[i], :visitor => teams[i+1]})
+      c.phases.first.matches << m
       i = i + 2
     end
-
-    c = Championship.create
-    p = Phase.create
-    p.matches = matches
-    c.phases << p
+		puts c.inspect
     return c
   end
 

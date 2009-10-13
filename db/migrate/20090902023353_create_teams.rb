@@ -3,7 +3,7 @@ class CreateTeams < ActiveRecord::Migration
     create_table :teams do |t|
       t.string :name
       t.integer :points, :default => 0
-      t.references :match
+#      t.references :match
       t.timestamps
     end
   end

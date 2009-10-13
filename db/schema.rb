@@ -13,6 +13,7 @@ ActiveRecord::Schema.define(:version => 20090925011522) do
 
   create_table "championships", :force => true do |t|
     t.string   "name"
+    t.integer  "num_teams"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
