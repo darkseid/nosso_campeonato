@@ -1,0 +1,20 @@
+<h1>Crie o seu campeonato</h1>
+
+<% form_for @championship do |f|%>
+
+	<p>
+		<%= f.label :num_teams, 'Número de times'%>
+		<%= f.text_field :num_teams %>
+	</p>
+	
+	<p>
+		<%= f.label :name, 'Nome do campeonato'%>
+		<%= f.text_field :name %>
+	</p>	
+	
+	<p>
+		<%= f.submit 'Pŕoximo passo' %>
+	</p>
+	
+
+<% end %>

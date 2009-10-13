@@ -1,0 +1,18 @@
+<h1>Crie o seu campeonato</h1>
+<h2><%= @championship.name%></h2>
+
+<% form_tag :action => 'page_2'  do -%>
+
+	<%= hidden_field_tag 'championship[name]', @championship.name %>
+
+	<% field_set_tag 'Times da primeira fase' do -%>
+		<% (1..@championship.num_teams.to_i).each do |t| -%>
+			<p><%= text_field_tag "teams[#{t}]" %></p>
+		<% end -%>
+	<% end -%>
+	
+	<p>
+		<%= submit_tag 'Próximo passo' %>
+	</p>
+<% end -%>
+

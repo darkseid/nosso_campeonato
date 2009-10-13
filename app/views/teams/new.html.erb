@@ -1,0 +1,10 @@
+<% form_for @teams.first do |f| %>
+
+	<% @teams.each_with_index do |team, i| %>
+		<p><%= f.text_field "name", :index => i %></p>
+	<% end %>
+	<p>
+		<%= submit_tag 'Próximo passo' %>
+	</p>
+<% end -%>
+
