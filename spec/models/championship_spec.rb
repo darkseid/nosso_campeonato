@@ -23,6 +23,7 @@ describe Championship do
     end
 
     it "with 4 teams, should generate 6 matches" do
+      pending "not yet implemented"
       champ = ChampionshipFactory.build_championship [teams(:corinthians), teams(:santos), 
                                                       teams(:palmeiras), teams(:sao_paulo)]
       champ.should have(1).phases
