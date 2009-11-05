@@ -44,7 +44,7 @@ describe Championship do
   
   context "with playoff structure" do
     before(:each) do
-      @factory = PlayoffFactory.new
+      @factory = PlayoffBuilder.new
     end
      
     specify "should build a championship with maximum 16 teams" do
@@ -66,8 +66,12 @@ describe Championship do
 
         champ.phases.size.should == 1
         champ.phases[0].matches.size.should == 1
-        champ.phases[0].matches[0].home.name.should == 'Corinthians'
-        champ.phases[0].matches[0].visitor.name.should == 'Santos'    
+        
+        teams.should include champ.phases[0].matches[0].home
+        teams.should include champ.phases[0].matches[0].visitor
+        
+        #champ.phases[0].matches[0].home.name.should == 'Corinthians'
+        #champ.phases[0].matches[0].visitor.name.should == 'Santos'    
     end
 
     specify "should build a championship with 2 match in phase 1, for 4 teams" do
@@ -85,15 +89,37 @@ describe Championship do
         phase_1.matches.size.should == 2
 
         m1 = phase_1.matches[0]
-        m1.home.name.should == 'Corinthians'
-        m1.visitor.name.should == 'Santos'  
+        teams.should include m1.home
+        teams.should include m1.visitor
+#        m1.home.name.should == 'Corinthians'
+#        m1.visitor.name.should == 'Santos'  
 
         m2 = phase_1.matches[1]
-        m2.home.name.should == 'Sao Paulo'
-        m2.visitor.name.should == 'Palmeiras'
+        teams.should include m1.home
+        teams.should include m1.visitor        
+        #m2.home.name.should == 'Sao Paulo'
+        #m2.visitor.name.should == 'Palmeiras'
     end
+
+  
+    specify "should build a championship with 4 matches in phase 1, for 5 teams, and 2 Empty teams must not match" do
+        teams = []
+        teams << Factory(:corinthians)
+        teams << Factory(:santos)
+        teams << Factory(:sao_paulo)
+        teams << Factory(:palmeiras)
+        teams << Factory(:gremio)
+    
+        champ = @factory.build_championship teams
+
+        champ.phases.size.should == 1
+        phase_1 = champ.phases[0]
+        phase_1.matches.size.should == 4
+        
+        phase_1.matches.each { |m| m.home.name.should_not be_nil if m.visitor.name.nil? }
+    end    
   end
-      
+  
   private 
   def match home_team, visitor_team
     Match.new({:home => teams(home_team), :visitor => teams(visitor_team)})
