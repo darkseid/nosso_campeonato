@@ -20,8 +20,9 @@ class ChampionshipsController < ApplicationController
 			@teams << t
 		end
 		
-		@championship = PlayoffFactory.new.build_championship @teams, params[:championship]['name']
-		render :show
+		@championship = PlayoffBuilder.new.build_championship @teams, params[:championship]['name']
+    # render :show
+    redirect_to(championship_path(@championship))
 	end
 	
 	def show

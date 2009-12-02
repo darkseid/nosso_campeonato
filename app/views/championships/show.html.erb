@@ -1,6 +1,7 @@
-<h1>Crie o seu campeonato</h1>
 <h2>Campeonato <%= h @championship.name %></h2>
 
-<%= render :partial => 'phases/phase', :collection => @championship.phases, :as => :phase %>
-
+<div class="championship">
+	<%= @championship.winner if @championship.finished? %>
+	<%= render :partial => 'phases/phase', :collection => @championship.phases, :as => :phase %>
+</div>
 <%= link_to 'Voltar', championships_path %>

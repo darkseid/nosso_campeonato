@@ -1,8 +1,5 @@
-<div class="show_phase">
+<div class="phase">
 	<p>Fase</p>	
-	
-	<% phase.matches.each{|m| puts "#{m.id} - #{m.home.inspect} | #{m.visitor.inspect}"} %>
-	
 	<%= render :partial => 'matches/match', :collection => phase.matches, :as => :match %>
 	<p>Fase <%= 'não' unless phase.done? %> concluída
 </div>
