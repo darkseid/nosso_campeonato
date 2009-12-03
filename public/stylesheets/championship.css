@@ -69,18 +69,24 @@ fieldset legend {
 
 
 #menu {
-	float: left;
 	width: 100%;
 	background-color: #229;
+	float: left;
 }
 
 #menu ul {
 	list-style: none;
-	width: 10em;
 	float: left;
 }
 
 #menu ul li {
-	position: relative;
-	background-color: #aB8;
+	display: inline;
+	padding: 5px;
+	float: left;
+}
+
+#menu ul li a {
+	font-size: 2em;
+	color: #FFF;
+	text-decoration: none;
 }
