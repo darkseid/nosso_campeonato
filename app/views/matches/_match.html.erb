@@ -7,7 +7,8 @@
 		
 		  <%= match.home.name %> <%= f.text_field :home_score %>
 		  X 
-		  <%= f.text_field :visitor_score %> <%= match.visitor.name %>		  
+		  <%= f.text_field :visitor_score %> <%= match.visitor.name %>	
+		  <%= "concluido" if match.done? %>	  
 			<%= submit_tag "Gravar", :id => "submit", :name => "submit"%>
 		<% end %>
 		

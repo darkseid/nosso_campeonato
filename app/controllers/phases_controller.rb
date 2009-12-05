@@ -82,4 +82,15 @@ class PhasesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def close
+  	phase = Phase.find(params[:id])
+  	phase.done!
+ 		phase.save
+ 		
+ 		phase.championship.next_phase phase
+ 
+	 	flash[:notice] = 'Fase concluída'
+    redirect_to championship_path(phase.championship)
+ 	end
 end

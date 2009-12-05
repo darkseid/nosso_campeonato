@@ -1,7 +1,4 @@
 class Match < ActiveRecord::Base
-
-#  has_one :home, :class_name => "Team"
-#  has_one :visitor, :class_name => "Team"
   
   belongs_to :home, :class_name => "Team"
   belongs_to :visitor, :class_name => "Team" 

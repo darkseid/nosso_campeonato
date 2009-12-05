@@ -9,6 +9,7 @@ class PlayoffBuilder
     
     teams << Team.new unless teams.size % 2 == 0
 
+		# TODO eliminar este random e adotar uma heuristica melhor
     teams = teams.sort_by {rand(7)}
 		
     c = Championship.create :name => name
@@ -21,6 +22,8 @@ class PlayoffBuilder
       c.phases.first.matches << m
       i = i + 2
     end
+    
+    c.champ_builder = self
     return c
   end
 
@@ -38,5 +41,20 @@ class PlayoffBuilder
     (1..(need_to_fill-teams.size)).each{|i| teams << Team.new(:name => nil)}
     teams
   end
+  
+  def next_phase_based_on phase
+  
+  	winners = phase.matches.collect{ |m| m.winner }
+  	
+  	num_of_matches_for_new_phase = phase.matches.size / 2
+  
+  	new_phase = Phase.new
+  
+  	num_of_matches_for_new_phase.times do |i|
+			new_phase.matches << Match.new({:home => winners.shift, :visitor => winners.shift})
+ 		end
+ 			
+  	new_phase
+	end
   
 end
