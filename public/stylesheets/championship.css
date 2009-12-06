@@ -64,7 +64,12 @@ fieldset legend {
 }
 
 .phase {
-	background-color: #EEE;
+	background-color: #DDDDDD;
+	width: 90%;
+}
+
+.championship {
+	background-color: #EFEFEF;
 }
 
 
@@ -86,7 +91,7 @@ fieldset legend {
 }
 
 #menu ul li a {
-	font-size: 2em;
+	font-size: 1.5em;
 	color: #FFF;
 	text-decoration: none;
 }

@@ -29,4 +29,10 @@ class ChampionshipsController < ApplicationController
 		@championship = Championship.find params[:id]
 	end
 	
+	def next_phase
+	  @championship = Championship.find params[:id]
+	  @championship.next_phase
+	  render :show
+	end
+	
 end

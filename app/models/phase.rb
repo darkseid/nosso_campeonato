@@ -12,10 +12,6 @@ class Phase < ActiveRecord::Base
     true
   end
   
-  def done
-    matches.each{|m| m.done = true}
-  end
-  
   def forward
     raise Exception.new if not done?
     

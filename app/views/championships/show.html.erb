@@ -1,7 +1,9 @@
 <h2>Campeonato <%= h @championship.name %></h2>
 
 <div class="championship">
-	<%= @championship.winner if @championship.finished? %>
+	<%= "<h3>Vencedor: #{@championship.winner}</h3>" if @championship.finished? %>
 	<%= render :partial => 'phases/phase', :collection => @championship.phases, :as => :phase %>
 </div>
+<%= link_to_unless @championship.finished?, "Próxima fase", :action => "next_phase", :id => @championship %>
+
 <%= link_to 'Voltar', championships_path %>
