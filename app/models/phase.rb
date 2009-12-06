@@ -4,11 +4,19 @@ class Phase < ActiveRecord::Base
   
   validates_presence_of :championship_id, :on => :create, :message => "A fase deve pertencer a um campeonato"
   
+  before_save :update_matches
+  
+  def update_matches
+    matches.each { |m| m.save! }
+ 	end
+  
   #
   # Todas as partidas devem estar terminadas para a fase ser concluida
   #
   def done?
-    matches.each{|m| return false unless m.done?}
+    matches.each do |m| 
+    	return false unless m.done?
+ 		end
     true
   end
   

@@ -21,7 +21,6 @@ class ChampionshipsController < ApplicationController
 		end
 		
 		@championship = PlayoffBuilder.new.build_championship @teams, params[:championship]['name']
-    # render :show
     redirect_to(championship_path(@championship))
 	end
 	
@@ -32,7 +31,7 @@ class ChampionshipsController < ApplicationController
 	def next_phase
 	  @championship = Championship.find params[:id]
 	  @championship.next_phase
-	  render :show
+    redirect_to(championship_path(@championship))
 	end
 	
 end

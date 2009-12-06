@@ -117,7 +117,67 @@ describe Championship do
         phase_1.matches.size.should == 4
         
         phase_1.matches.each { |m| m.home.name.should_not be_nil if m.visitor.name.nil? }
-    end    
+    end  
+    
+    specify "should get 1 more match for second phase in a 4 teams championship" do
+    	  teams = [Factory(:corinthians), Factory(:santos), Factory(:sao_paulo), Factory(:palmeiras)]
+    	
+    		champ = @factory.build_championship teams
+    		
+    		# Fase 1: Os time da casa ganham
+    		phase_1 = champ.phases[0]
+    		phase_1.matches[0].home_score = 2
+    		phase_1.matches[1].home_score = 1
+    		phase_1.done!
+    		
+    		phase_2 = champ.next_phase
+    		phase_2.matches.size.should == 1
+    		phase_2.matches[0].home.name.should == phase_1.matches[0].winner.name
+    		phase_2.matches[0].visitor.name.should == phase_1.matches[1].winner.name
+   	end  
+   	
+    specify "should get 2 more match for second phase in a 8 teams championship" do
+    	  teams = [Factory(:corinthians), Factory(:santos), Factory(:sao_paulo), Factory(:palmeiras),
+    	  Factory(:corinthians), Factory(:santos), Factory(:sao_paulo), Factory(:palmeiras)]
+    	
+    		champ = @factory.build_championship teams
+    		
+    		# Fase 1: Os time da casa ganham
+    		phase_1 = champ.phases[0]
+    		phase_1.matches[0].home_score = 2
+    		phase_1.matches[1].home_score = 1
+    		phase_1.matches[2].home_score = 3
+    		phase_1.matches[3].home_score = 1    		
+    		phase_1.done!
+    		
+    		phase_2 = champ.next_phase
+    		phase_2.matches.size.should == 2
+    		phase_2.matches[0].home.name.should == phase_1.matches[0].home.name
+    		phase_2.matches[0].visitor.name.should == phase_1.matches[1].home.name
+    		phase_2.matches[1].home.name.should == phase_1.matches[2].home.name
+    		phase_2.matches[1].visitor.name.should == phase_1.matches[3].home.name
+    		
+    		# Fase 2: Times visitantes vencem
+    		phase_2.matches[0].visitor_score = 1
+    		phase_2.matches[1].visitor_score = 1
+    		phase_2.done!
+    		
+    		# Fase 3
+    		phase_3 = champ.next_phase
+    		phase_3.matches.size.should == 1
+    		phase_3.matches[0].home.name.should == phase_2.matches[0].visitor.name
+    		phase_3.matches[0].visitor.name.should == phase_2.matches[1].visitor.name
+
+    		phase_3.matches[0].home_score = 3
+    		phase_3.done!
+    		
+    		# Campeao do campeonato
+    		champ.should be_finished
+    		champ.winner.should_not be_nil
+    		champ.winner.should == phase_3.matches[0].home
+    		
+   	end   	
+   	
   end
   
   private 
