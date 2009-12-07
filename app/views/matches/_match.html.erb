@@ -1,6 +1,6 @@
 <% field_set_tag 'match', :class => 'match' do %>
 	<% if match.done? %>
-		<%= match %>
+		<%= print_match match %>
 	<% else %>
 		<% form_for(match) do |f| %>
 			<%= hidden_field_tag 'match[home_id]', match.home.id %>

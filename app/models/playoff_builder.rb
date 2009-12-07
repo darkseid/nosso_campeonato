@@ -4,10 +4,11 @@ class PlayoffBuilder
   
   def build_championship(teams, name="vazio")
     raise "Utilize no máximo 16 times" if teams.size > Max
+    #teams << Team.new unless teams.size % 2 == 0
     teams = fill_teams(teams)
     matches = []
     
-    teams << Team.new unless teams.size % 2 == 0
+    
 
 		# TODO eliminar este random e adotar uma heuristica melhor
     teams = teams.sort_by {rand(7)}
@@ -17,13 +18,19 @@ class PlayoffBuilder
 
     i=0
     num_of_teams = teams.size
+    puts "Numero de times #{num_of_teams}"
     while i < teams.size do
     	m = Match.create({:home => teams[i], :visitor => teams[i+1]})
+      if (m.home.nil? || m.visitor.nil?)
+        m.done = true 
+      end
+      puts "Chapeu ? #{m.home.nil? || m.visitor.nil?}"
       c.phases.first.matches << m
       i = i + 2
     end
     
-    c.champ_builder = self
+    puts "numero de jogos: #{c.phases.first.matches.size}"
+    
     return c
   end
 
@@ -38,7 +45,10 @@ class PlayoffBuilder
       need_to_fill = (2 ** i) if teams.size <= (2 ** i)
       i = i + 1
     end
-    (1..(need_to_fill-teams.size)).each{|i| teams << Team.new(:name => nil)}
+    (1..(need_to_fill-teams.size)).each do |i| 
+      puts "inserindo um time nulo na lista de times do campeonato"
+      teams << nil 
+      end #Team.new(:name => nil)}
     teams
   end
   

@@ -6,10 +6,17 @@ class Match < ActiveRecord::Base
   
   validates_numericality_of :home_score, :on => :create, :message => "is not a number"
   validates_numericality_of :visitor_score, :on => :create, :message => "is not a number"
-  validates_presence_of :home, :on => :create, :message => "can't be blank"
-  validates_presence_of :visitor, :on => :create, :message => "can't be blank"
+
 
   def winner
+    if visitor.nil? 
+      return home
+    end
+    
+    if home.nil? 
+      return visitor
+    end
+    
     return home if home_score > visitor_score
     return visitor if visitor_score > home_score
     nil
@@ -23,9 +30,8 @@ class Match < ActiveRecord::Base
     home.eql? other.home and visitor.eql? other.visitor
   end
   
-  def to_s
-    "#{home.name} #{home_score} X #{visitor_score} #{visitor.name}"
+  def incomplete?
+    home.nil? || visitor.nil?
   end
-  
     
 end

@@ -16,8 +16,7 @@ class Championship < ActiveRecord::Base
   # Informa se o campeonato terminou
   #
   def finished?
-    phases.each{|p| return false unless p.done?}
-    true
+    phases.last.done? && phases.last.matches.size == 1
   end
   
   def next_phase
