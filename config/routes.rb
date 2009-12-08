@@ -1,8 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.devise_for :users
+
   map.resources :phases
   map.resources :matches
   map.resources :championships
   map.resources :teams
+  map.resources :users
+  
   map.root :championships
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -14,7 +18,6 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
-	map.close 'phases/:id/close', :controller => 'phases', :action => 'close'
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products

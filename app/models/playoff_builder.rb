@@ -8,8 +8,6 @@ class PlayoffBuilder
     teams = fill_teams(teams)
     matches = []
     
-    
-
 		# TODO eliminar este random e adotar uma heuristica melhor
     teams = teams.sort_by {rand(7)}
 		
@@ -18,18 +16,14 @@ class PlayoffBuilder
 
     i=0
     num_of_teams = teams.size
-    puts "Numero de times #{num_of_teams}"
     while i < teams.size do
     	m = Match.create({:home => teams[i], :visitor => teams[i+1]})
       if (m.home.nil? || m.visitor.nil?)
         m.done = true 
       end
-      puts "Chapeu ? #{m.home.nil? || m.visitor.nil?}"
       c.phases.first.matches << m
       i = i + 2
     end
-    
-    puts "numero de jogos: #{c.phases.first.matches.size}"
     
     return c
   end

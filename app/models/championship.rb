@@ -1,5 +1,6 @@
 class Championship < ActiveRecord::Base
   has_many :phases
+  belongs_to :user
 
   #
   # Informa o campeao do campeonato
