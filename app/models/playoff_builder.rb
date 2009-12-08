@@ -23,7 +23,6 @@ class PlayoffBuilder
       i = i + 2
     end
     
-    c.champ_builder = self
     return c
   end
 

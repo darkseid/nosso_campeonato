@@ -3,6 +3,7 @@ class CreateChampionships < ActiveRecord::Migration
     create_table :championships do |t|
       t.string :name
       t.integer :num_teams
+      t.references :user
 
       t.timestamps
     end
