@@ -1,11 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
   map.devise_for :users
-
   map.resources :phases
-  map.resources :matches
-  map.resources :championships
-  map.resources :teams
-  map.resources :users
+   map.resources :matches
+   map.resources :championships
+   map.resources :teams
+   map.resources :users
   
   map.root :championships
 
