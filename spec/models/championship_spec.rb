@@ -3,6 +3,27 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Championship do
   fixtures :teams
   
+  context "Basic" do
+    
+    it "should have turns, and each turn, should have phases" do
+      
+      champ_teams = []
+      (1..8).each {|i| champ_teams << Team.new(:name => i.to_s )}
+      
+      champ = PlayoffBuilder.new.build_championship champ_teams
+      
+      champ.turns.size == 1
+      
+      phases = champ.turns.first.phases
+      
+      phases.first.matches.size == 4
+      
+    end
+    
+    
+  end
+  
+  
   context "with all-for-all structure" do
   
     before(:each) do

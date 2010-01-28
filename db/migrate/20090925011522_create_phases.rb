@@ -1,7 +1,7 @@
 class CreatePhases < ActiveRecord::Migration
   def self.up
     create_table :phases do |t|
-      t.references :championship
+      t.references :turn
 
       t.timestamps
     end

@@ -1,24 +1,30 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Match do
-  #fixtures :matches, :teams
 
-  
   it "should be valid with home and visitor teams" do
     match = create_match
     match.should be_valid
   end
   
-  it "should be valid invalid without home team" do
+  it "should be valid even without home team" do
     match = create_match
     match.home = nil
     
-    match.should_not be_valid
+    match.should be_valid
   end  
 
-  it "shold be valid invalid without visitor team" do
+  it "shold be valid even without visitor team" do
     match = create_match
     match.visitor = nil
+    
+    match.should be_valid
+  end
+  
+  it "shold be invalid without visitor and home team" do
+    match = create_match
+    match.visitor = nil
+    match.home = nil
     
     match.should_not be_valid
   end  

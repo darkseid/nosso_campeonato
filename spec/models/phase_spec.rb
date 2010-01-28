@@ -46,7 +46,9 @@ describe Phase do
       p = Phase.new
       p.add_match Factory(:match_one)
       p.add_match Factory(:match_two)
-      p.done
+      p.matches[0].done = true
+      p.matches[1].done = true
+      p.should be_done
 
       next_phase = p.forward
       next_phase.matches.size.should == 1

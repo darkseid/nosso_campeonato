@@ -1,4 +1,4 @@
-body { background-color: #fff; color: #333; }
+html, body { background-color: #fff; color: #333; height: 100%; margin: 0;}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -72,6 +72,24 @@ fieldset legend {
 	background-color: #EFEFEF;
 }
 
+div#container {
+	min-height: 100%;
+	background-color: blue;
+	position: relative;
+}
+
+div#header{
+	background-color: green;
+/*	margin-top: -17px;*/
+	height: 8em;
+}
+
+div#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+}
 
 div#menu {
 	width: 100%;
@@ -92,9 +110,4 @@ div#menu ul li a {
 	font-size: 1.5em;
 	color: #FFF;
 	text-decoration: none;
-}
-
-div#content {
-	background-color: red;
-	padding: 2px;
 }

@@ -1,5 +1,5 @@
 class Championship < ActiveRecord::Base
-  has_many :phases
+  has_many :turns
   belongs_to :user
 
   #

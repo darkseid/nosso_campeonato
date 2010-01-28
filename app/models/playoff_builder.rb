@@ -12,7 +12,9 @@ class PlayoffBuilder
     teams = teams.sort_by {rand(7)}
 		
     c = Championship.create :name => name
-    c.phases << Phase.create
+    home_turn = Turn.create
+    
+    home_turn.phases << Phase.create
 
     i=0
     num_of_teams = teams.size
@@ -21,9 +23,11 @@ class PlayoffBuilder
       if (m.home.nil? || m.visitor.nil?)
         m.done = true 
       end
-      c.phases.first.matches << m
+      home_turn.phases.first.matches << m
       i = i + 2
     end
+    
+    c.turns << home_turn
     
     return c
   end
